@@ -60,12 +60,6 @@ function _s_setup() {
 	add_theme_support( 'post-formats', array(
 		'aside', 'image', 'video', 'quote', 'link'
 	) );
-
-	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 }
 endif; // _s_setup
 add_action( 'after_setup_theme', '_s_setup' );
