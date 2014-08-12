@@ -177,7 +177,8 @@ strong {
 dfn,
 cite,
 em,
-i {
+i,
+var {
 	font-style: italic;
 }
 
@@ -204,8 +205,7 @@ pre {
 code,
 kbd,
 samp,
-tt,
-var {
+tt {
 	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
