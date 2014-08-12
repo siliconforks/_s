@@ -104,6 +104,11 @@ function _s_scripts() {
 }
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
 
+/*
+ * Remove rel='prev' and rel='next' link elements.
+ */
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10 );
+
 /**
  * Implement the Custom Header feature.
  */
