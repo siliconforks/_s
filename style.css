@@ -59,7 +59,6 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
 	font-family: inherit;
-	font-style: inherit;
 	margin: 0;
 	outline: 0;
 	padding: 0;
@@ -188,6 +187,7 @@ blockquote {
 
 address {
 	margin: 0 0 1.5em;
+	font-style: inherit;
 }
 
 pre {
