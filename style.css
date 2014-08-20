@@ -71,14 +71,6 @@ html {
 	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
 
-*,
-*:before,
-*:after { /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-	-webkit-box-sizing: border-box; /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
-	-moz-box-sizing:    border-box; /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
-	box-sizing:         border-box;
-}
-
 body {
 	background: #fff; /* Fallback for when there is no custom background color defined. */
 }
@@ -190,6 +182,7 @@ address {
 }
 
 pre {
+	box-sizing: border-box;
 	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
@@ -283,6 +276,7 @@ dd {
 }
 
 img {
+	box-sizing: border-box;
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
 }
@@ -358,8 +352,6 @@ input[type="radio"] {
 
 input[type="search"] {
 	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
-	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-	-moz-box-sizing:    content-box;
 	box-sizing:         content-box;
 }
 
@@ -402,10 +394,15 @@ input[type="search"] {
 }
 
 textarea {
+	box-sizing: border-box;
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
 	padding-left: 3px;
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	width: 100%;
+}
+
+select {
+	box-sizing: border-box;
 }
 
 /*--------------------------------------------------------------
@@ -432,6 +429,7 @@ a:active {
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
+	box-sizing: border-box;
 	clear: both;
 	display: block;
 	float: left;
@@ -469,6 +467,7 @@ a:active {
 }
 
 .main-navigation ul ul a {
+	box-sizing: border-box;
 	width: 200px;
 }
 
@@ -523,6 +522,7 @@ a:active {
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
 .post-navigation .nav-previous {
+	box-sizing: border-box;
 	float: left;
 	width: 50%;
 }
@@ -530,6 +530,7 @@ a:active {
 .comment-navigation .nav-next,
 .paging-navigation .nav-next,
 .post-navigation .nav-next {
+	box-sizing: border-box;
 	float: right;
 	text-align: right;
 	width: 50%;
@@ -718,6 +719,7 @@ a:active {
 embed,
 iframe,
 object {
+	box-sizing: border-box;
 	max-width: 100%;
 }
 
@@ -725,6 +727,7 @@ object {
 12.1 Captions
 --------------------------------------------------------------*/
 .wp-caption {
+	box-sizing: border-box;
 	margin-bottom: 1.5em;
 	max-width: 100%;
 }
@@ -750,6 +753,7 @@ object {
 }
 
 .gallery-item {
+	box-sizing: border-box;
 	display: inline-block;
 	text-align: center;
 	vertical-align: top;
