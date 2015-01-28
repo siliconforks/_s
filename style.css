@@ -197,7 +197,9 @@ code,
 kbd,
 samp,
 tt {
-	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
 abbr,
@@ -561,6 +563,7 @@ a:active {
 	color: #21759b;
 	display: block;
 	font-size: 14px;
+	font-size: 1.4rem;
 	font-weight: bold;
 	height: auto;
 	left: 5px;
