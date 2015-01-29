@@ -283,8 +283,6 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-size: 100%;
-	font-weight: inherit;
 }
 
 p {
@@ -310,7 +308,6 @@ blockquote {
 
 address {
 	margin: 0 0 1.5em;
-	font-style: inherit;
 }
 
 pre {
@@ -330,9 +327,9 @@ code,
 kbd,
 samp,
 tt {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
 abbr,
@@ -800,8 +797,8 @@ a:active {
 11.0 Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden). */
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling). */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
 	display: none;
 }
 
