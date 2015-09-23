@@ -53,15 +53,39 @@
 
 	// Each time a menu link is focused or blurred, toggle focus.
 	for ( i = 0, len = links.length; i < len; i++ ) {
-		links[i].addEventListener( 'focus', toggleFocus, true );
-		links[i].addEventListener( 'blur', toggleFocus, true );
+		if ( links[i].addEventListener ) {
+			links[i].addEventListener( 'focus', toggleFocus, true );
+			links[i].addEventListener( 'blur', toggleFocus, true );
+		}
+		else if ( links[i].attachEvent ) {
+			links[i].attachEvent( 'onfocus', toggleFocus );
+			links[i].attachEvent( 'onblur', toggleFocus );
+		}
 	}
 
 	/**
 	 * Sets or removes .focus class on an element.
 	 */
-	function toggleFocus() {
-		var self = this;
+	function toggleFocus( e ) {
+		if ( ! e ) {
+			if ( window.event ) {
+				e = window.event;
+			}
+			else {
+				return;
+			}
+		}
+
+		var self;
+		if ( e.target ) {
+			self = e.target;
+		}
+		else if ( e.srcElement ) {
+			self = e.srcElement;
+		}
+		else {
+			return;
+		}
 
 		// Move up through the ancestors of the current link until we hit .nav-menu.
 		while ( -1 === self.className.indexOf( 'nav-menu' ) ) {
